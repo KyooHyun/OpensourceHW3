@@ -1,0 +1,17 @@
+<!-- templates/todo_app/add_todo.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>할 일 추가</title>
+</head>
+<body>
+    <h1>할 일 추가</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">추가</button>
+    </form>
+    <a href="{% url 'todo_list' %}">목록으로 돌아가기</a>
+</body>
+</html>
